@@ -4,16 +4,20 @@
 // ...
 getInstruction("mashedPotatoes", 0, (step0) => {
   document.querySelector("#mashedPotatoes").innerHTML += `<li>${step0}</li>`;
+
   getInstruction("mashedPotatoes", 1, (step2) => {
     document.querySelector("#mashedPotatoes").innerHTML += `<li>${step2}</li>`;
+
     getInstruction("mashedPotatoes", 2, (step3) => {
       document.querySelector(
         "#mashedPotatoes"
       ).innerHTML += `<li>${step3}</li>`;
+
       getInstruction("mashedPotatoes", 3, (step4) => {
         document.querySelector(
           "#mashedPotatoes"
         ).innerHTML += `<li>${step4}</li>`;
+
         getInstruction("mashedPotatoes", 4, (step5) => {
           document.querySelector(
             "#mashedPotatoes"
@@ -97,7 +101,9 @@ async function makeBroccoli() {
 }
 makeBroccoli();
 
-// Bonus 2 - Promise all
+
+
+// Bonus 1 
 // ...
 const promise0 = obtainInstruction("brusselsSprouts", 0);
 const promise1 = obtainInstruction("brusselsSprouts", 1);
@@ -127,3 +133,5 @@ Promise.all(promises)
     document.querySelector("#brusselsSproutsImg").removeAttribute("hidden");
   })
   .catch("There was an error");
+
+  // Bonus 2
